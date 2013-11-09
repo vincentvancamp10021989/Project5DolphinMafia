@@ -16,7 +16,7 @@ namespace WebApplication1.Klasses.Login.linq
     {
         #region Fields
         private SecureString password;
-        public unsafe readonly string Password
+        public unsafe string Password
         {
             [SecurityCritical]
             set

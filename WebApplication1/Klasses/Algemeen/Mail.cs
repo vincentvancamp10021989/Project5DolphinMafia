@@ -15,7 +15,7 @@ namespace WebApplication1.Klasses.Algemeen
     public class Mail
     {
         private SecureString passwordEmailAdmin;
-        public unsafe readonly string PasswordEmailAdmin
+        public unsafe string PasswordEmailAdmin
         {
             [SecurityCritical]
             set
@@ -51,7 +51,7 @@ namespace WebApplication1.Klasses.Algemeen
         }
 
         private SecureString emailAdmin;
-        public unsafe readonly string EmailAdmin
+        public unsafe string EmailAdmin
         {
             [SecurityCritical]
             set
@@ -87,7 +87,7 @@ namespace WebApplication1.Klasses.Algemeen
         }
 
         private SecureString newPassword;
-        public unsafe readonly string NewPassword
+        public unsafe string NewPassword
         {
             [SecurityCritical]
             set
@@ -127,8 +127,8 @@ namespace WebApplication1.Klasses.Algemeen
         private const short EMAIL_SENDER_PORT = 587;
 
         public string ToMailAdress { set; get; }
-        public readonly MailMessage MailMessager { set; get; }
-        public readonly SmtpClient SmtpClients { set; get; }
+        public MailMessage MailMessager { set; get; }
+        public SmtpClient SmtpClients { set; get; }
         public LambdaLecturers Lecturer { set; get; }
 
         public Mail()
