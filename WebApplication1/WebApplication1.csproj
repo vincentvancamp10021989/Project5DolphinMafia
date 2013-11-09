@@ -69,6 +69,7 @@
     <Content Include="AdminSlotsUpdate.aspx" />
     <Content Include="images\artesis.jpg" />
     <Content Include="LoginView.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="RegistrationView.aspx" />
     <Content Include="ReservationsView.aspx" />
     <Content Include="SlotsView.aspx" />
@@ -128,6 +129,13 @@
     </Compile>
     <Compile Include="LoginView.aspx.designer.cs">
       <DependentUpon>LoginView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationView.aspx.cs">
