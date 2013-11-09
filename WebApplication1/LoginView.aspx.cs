@@ -31,14 +31,13 @@ namespace WebApplication1
 
         protected void buttonSend_Click(object sender, EventArgs e)
         {
-            this.lectors = new LambdaLecturers(this.txtBoxMail.Text);
-            if (this.lectors.GetCheckExistEmail())
+            try
             {
-                this.sendMail = new Mail(this.lectors.EMail);
-
-
+                this.sendMail = new Mail(this.txtBoxMail.Text);
+                this.sendMail.SendEmailWithNewPassword();
                 this.txtBoxMail.Text = "";
             }
+            catch { }
         }
     }
 }
