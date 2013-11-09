@@ -12,13 +12,21 @@ namespace WebApplication1
 {
     public partial class LoginView : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-        }
-
+        private const string NEXT_PAGE_SESSION = "LoginView.aspx";
         private LambdaLecturers lectors;
         private Mail sendMail;
         private const string NEXT_PAGE = "SlotsView.aspx";
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()].Equals(string.Empty))
+                    HttpContext.Current.Response.Redirect(NEXT_PAGE);
+            }
+            catch { }
+        }
+
         protected void buttonLogin_Click(object sender, EventArgs e)
         {
               this.lectors = new LambdaLecturers(this.textboxUsername.Text, this.textboxPassword.Text);
