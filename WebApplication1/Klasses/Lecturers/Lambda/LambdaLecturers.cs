@@ -84,7 +84,7 @@ namespace WebApplication1.Klasses.Login.linq
         {
             var result = Entity.DB_Lecturers
                 .Any(x =>
-                        x.Password.Equals(this.Password)
+                        x.Password.Equals(Hash.Password_Encryption_md5(this.Password))
                         && x.EMail.Equals(this.EMail)
                     );
             return result;
@@ -93,7 +93,7 @@ namespace WebApplication1.Klasses.Login.linq
         {
             Lecturers lector = Entity.DB_Lecturers
                 .Where(x =>
-                        x.Password.Equals(this.Password)
+                        x.Password.Equals(Hash.Password_Encryption_md5(this.Password))
                         && x.EMail.Equals(this.EMail)
                     ).First();
             return lector;

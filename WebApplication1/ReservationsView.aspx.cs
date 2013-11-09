@@ -14,15 +14,21 @@ namespace WebApplication1
     public partial class ReservationsView : System.Web.UI.Page
     {   
         private LambdaReservations linqReservations;
+        private const string NEXT_PAGE = "LoginView.aspx";
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.linqReservations = new LambdaReservations();
-            this.linqReservations.GetReservationsByID();
             try
             {
-                MessageBox.Show(HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()].ToString());
+                if (HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()].Equals(string.Empty))
+                    HttpContext.Current.Response.Redirect(NEXT_PAGE);
             }
-            catch { }
+            catch
+            {
+                HttpContext.Current.Response.Redirect(NEXT_PAGE);
+            }
+
+            this.linqReservations = new LambdaReservations();
+            this.linqReservations.GetReservationsByID();
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
