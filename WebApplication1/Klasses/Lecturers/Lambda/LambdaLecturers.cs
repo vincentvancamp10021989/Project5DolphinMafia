@@ -113,7 +113,7 @@ namespace WebApplication1.Klasses.Login.linq
                     x.EMail.Equals(this.EMail));
             return result;
         }
-        public Lecturer GetLecturerInfoWithEmail()
+        public Lecturer SetChangeLecturerPasswordWithEmail()
         {
             var lecturer = Entity.dataClassContext.Lecturers
                 .Where(z =>
