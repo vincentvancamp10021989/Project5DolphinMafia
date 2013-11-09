@@ -135,10 +135,11 @@ namespace WebApplication1.Klasses.Algemeen
         {
             this.MailMessager = new MailMessage();
             this.SmtpClients = new SmtpClient();
-            this.EmailAdmin = "jimbo_mt_18@hotmail.com";
-            this.PasswordEmailAdmin = "......";
+            this.EmailAdmin = "jimbo_mt_18@hotmail.com"; // GMAIL ACCOUNT.
+            this.PasswordEmailAdmin = "........";
         }
         public Mail(string toMailAdress)
+            :this()
         {
             this.ToMailAdress = toMailAdress;
         }
@@ -154,12 +155,12 @@ namespace WebApplication1.Klasses.Algemeen
                     this.MailMessager.From = new MailAddress(this.EmailAdmin);
                     this.MailMessager.To.Add(new MailAddress(this.ToMailAdress));
                     this.MailMessager.Subject = "[Artesis]lokaal reservation: Forget Password";
-                    this.MailMessager.Body = "Password is: " + this.NewPassword;
-
+                    this.MailMessager.Body = "New Password is: " + this.NewPassword;
                     this.SmtpClients.Port = EMAIL_SENDER_PORT;
                     this.SmtpClients.Host = EMAIL_SENDER_HOST;
                     this.SmtpClients.EnableSsl = true;
                     this.SmtpClients.UseDefaultCredentials = false;
+
                     this.SmtpClients.Credentials = new NetworkCredential(this.EmailAdmin, this.PasswordEmailAdmin);
                     this.SmtpClients.DeliveryMethod = SmtpDeliveryMethod.Network;
                     this.SmtpClients.Send(this.MailMessager);
