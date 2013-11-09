@@ -1,0 +1,5 @@
+C:\GitProject\WebApplication1\UnitTestProject5\bin\Debug\UnitTestProject5.dll
+C:\GitProject\WebApplication1\UnitTestProject5\bin\Debug\UnitTestProject5.pdb
+C:\GitProject\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.csprojResolveAssemblyReference.cache
+C:\GitProject\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.dll
+C:\GitProject\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.pdb
