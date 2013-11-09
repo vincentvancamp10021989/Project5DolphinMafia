@@ -97,7 +97,7 @@ namespace WebApplication1.Klasses.Algemeen
             this.MailMessager = new MailMessage();
             this.SmtpClients = new SmtpClient();
             this.ToMailAdress = "jimbo_mt_18@hotmail.com";
-            this.PasswordEmailAdmin = "rf62.....";
+            this.PasswordEmailAdmin = "......";
         }
         public Mail(string toMailAdress)
         {
