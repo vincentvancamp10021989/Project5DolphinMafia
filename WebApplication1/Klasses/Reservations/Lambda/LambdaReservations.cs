@@ -36,7 +36,6 @@ namespace WebApplication1.Klasses.Reservations.linq
                     ).ToList();
             return reservations;
         }
-
         public Reservation SetReservationInsertData()
         {
             Reservation reservation = new Reservation()
@@ -46,7 +45,6 @@ namespace WebApplication1.Klasses.Reservations.linq
             };
             List.dataClassContext.Reservations.InsertOnSubmit(reservation);
             List.dataClassContext.SubmitChanges();
-
             return reservation;
         }
 
@@ -69,6 +67,7 @@ namespace WebApplication1.Klasses.Reservations.linq
         {
             Reservation reservation = (from Reservation r in List.dataClassContext.Reservations
                                            where r.Slot_id.Equals(this.Id)
+                                           && r.Lecturer_id.Equals(Convert.ToInt32(HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()]))
                                            select r).Single();
 
             this.List.dataClassContext.Reservations.DeleteOnSubmit(reservation);

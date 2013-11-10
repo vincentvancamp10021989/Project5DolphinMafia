@@ -39,7 +39,7 @@ namespace WebApplication1.Klasses.Algemeen
             this.Bord[x].CommandName = stringID;
 
             if (!lambdaSlots.GetControlAvailibe())
-                this.Bord[x].Text = "V";
+                this.Bord[x].Text = stringID;
             else
             {
                 this.Bord[x].Text = "x";
@@ -73,8 +73,11 @@ namespace WebApplication1.Klasses.Algemeen
             {
                 this.lambdaReservations = new LambdaReservations(Convert.ToInt32(this.Bord[x].CommandName));
                 this.lambdaSlots = new LambdaSlots(this.lambdaReservations.Id);
-                if (lambdaReservations.GetCheckDatabaseRowID())
+                HttpContext.Current.Session.Add(SessionEnum.SessionNames.SlotsID.ToString(), Convert.ToInt32(this.Bord[x].CommandName));
+
+                if (lambdaReservations.GetCheckReservationId())
                 {
+                    MessageBox.Show(this.lambdaReservations.Id.ToString());
                     lambdaReservations.SetDeleteReservationRowById();
                     this.lambdaSlots.SetSlotsUpdateDataCountUp();
                     HttpContext.Current.Response.Redirect(RESERVATION_PAGE);

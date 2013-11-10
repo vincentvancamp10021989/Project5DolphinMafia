@@ -19,7 +19,6 @@ namespace WebApplication1
 {
     public partial class ReservationsView : System.Web.UI.Page
     {   
-        private LambdaReservations linqReservations;
         private const string NEXT_PAGE = "LoginView.aspx";
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,23 +32,9 @@ namespace WebApplication1
                 HttpContext.Current.Response.Redirect(NEXT_PAGE);
             }
 
-
-            this.linqReservations = new LambdaReservations();
-            List<Reservations> listReservationByLecturerId = this.linqReservations.GetReservationsByID();
-            List<Slots> listSlots = new Entity().DB_Slots;
-
-            List<Slots> list = new List<Slots>();
-            for (int i = 0; i < listReservationByLecturerId.Count; i++)
-            {
-                for (int j = i; j < listSlots.Count; j++)
-                {
-                    if (listReservationByLecturerId.ElementAt(i).SlotID.Equals(listSlots.ElementAt(j).ID))
-                        list.Add(listSlots.ElementAt(j));
-                }
-            }
-
-            TableReservation tableReservation = new TableReservation(listReservationByLecturerId);
-            int rowCnt = list.Count; // rijen 
+            TableReservation tableReservation = new TableReservation();
+            List<Slots> list = tableReservation.GetTableReservationsByLecturerID();
+            int rowCnt = list.Count;  
 
             for (int rowCtr = 0; rowCtr < rowCnt; rowCtr++)
             {
@@ -90,15 +75,11 @@ namespace WebApplication1
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
 
         protected void GridView1_Load(object sender, EventArgs e)
         {
-            // Code schrijven voor alle records weer te laten geven.
-            GridView1.DataSource = new Entity().DB_Campus;
-            GridView1.DataBind();
         }
     }
 }
