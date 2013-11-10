@@ -68,7 +68,7 @@ namespace WebApplication1.Klasses.Reservations.linq
             Reservation reservation = (from Reservation r in List.dataClassContext.Reservations
                                            where r.Slot_id.Equals(this.Id)
                                            && r.Lecturer_id.Equals(Convert.ToInt32(HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()]))
-                                           select r).Single();
+                                           select r).First();
 
             this.List.dataClassContext.Reservations.DeleteOnSubmit(reservation);
             this.List.dataClassContext.SubmitChanges();

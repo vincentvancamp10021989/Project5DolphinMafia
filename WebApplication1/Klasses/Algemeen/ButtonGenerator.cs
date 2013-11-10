@@ -48,6 +48,19 @@ namespace WebApplication1.Klasses.Algemeen
             return this.Bord[x];
         }
 
+        public System.Web.UI.WebControls.Button WriteReservationButton(int x, string stringID)
+        {
+            this.entity = new Entity();
+            this.lambdaReservations = new LambdaReservations(entity.DB_Reservations.ElementAt(x).ID);
+
+            this.Bord[x] = new System.Web.UI.WebControls.Button();
+            this.Bord[x].Width = GROTEBUTTON_X;
+            this.Bord[x].Height = GROTEBUTTON_Y;
+            this.Bord[x].CommandName = stringID;
+            this.Bord[x].Text = stringID;
+            return this.Bord[x];
+        }
+
         public void ClickSlots(int x)
         {
             this.Bord[x].Click += delegate(object s, EventArgs ex)
@@ -77,7 +90,6 @@ namespace WebApplication1.Klasses.Algemeen
 
                 if (lambdaReservations.GetCheckReservationId())
                 {
-                    MessageBox.Show(this.lambdaReservations.Id.ToString());
                     lambdaReservations.SetDeleteReservationRowById();
                     this.lambdaSlots.SetSlotsUpdateDataCountUp();
                     HttpContext.Current.Response.Redirect(RESERVATION_PAGE);

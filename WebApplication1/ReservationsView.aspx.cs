@@ -68,7 +68,7 @@ namespace WebApplication1
             ButtonGenerator b = new ButtonGenerator(rowCnt);
             for (int i = 0; i < rowCnt; i++)
             {
-                Panel1.Controls.Add(b.WriteButton(i, list.ElementAt(i).ID.ToString())); //slot id
+                Panel1.Controls.Add(b.WriteReservationButton(i, list.ElementAt(i).ID.ToString())); //slot id
                 b.ClickReservationsDelete(i);
             }
         }
