@@ -12,10 +12,14 @@ namespace WebApplication1.Klasses.Reservations.linq
         public int Id { set; get; }
         public int SlotId { set; get; }
         public Entity List;
+        public int SlotID_Session { set; get; }
+        public int LecturerID_Session { set; get; }
 
         public LambdaReservations()
         {
             this.List = new Entity();
+            this.SlotID_Session = Convert.ToInt32(HttpContext.Current.Session[SessionEnum.SessionNames.SlotsID.ToString()]);
+            this.LecturerID_Session = Convert.ToInt32(HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()]);
         }
         public LambdaReservations(int id)
             :this()

@@ -30,5 +30,18 @@ namespace WebApplication1.Klasses.Campus.Lambda
             this.Entity.dataClassContext.SubmitChanges();
             return campus;
         }
+        public Boolean GetCheckUniekPlace()
+        {
+            var list = this.Entity.DB_Campus
+                .Any(x =>
+                    x.Place.Equals(this.CampusName));
+            return list;
+        }
+        public List<Campus> GetUniekCampusList()
+        {
+            List<Campus> list = this.Entity.DB_Campus.Distinct().ToList();
+            return list;
+        }
+
     }
 }

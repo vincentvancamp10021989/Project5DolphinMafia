@@ -29,7 +29,7 @@ namespace WebApplication1
 
         protected void buttonLogin_Click(object sender, EventArgs e)
         {
-              this.lectors = new LambdaLecturers(this.textboxUsername.Text, this.textboxPassword.Text);
+              this.lectors = new LambdaLecturers(HttpUtility.HtmlEncode(this.textboxUsername.Text), HttpUtility.HtmlEncode(this.textboxPassword.Text));
               if (this.lectors.GetCheckLectorInfo())
               {
                   HttpContext.Current.Session.Add(SessionEnum.SessionNames.LecturorsID.ToString(), this.lectors.GetCheckLecturersInfo_DatabaseFields().ID);

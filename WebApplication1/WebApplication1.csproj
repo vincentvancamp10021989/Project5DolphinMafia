@@ -73,7 +73,9 @@
     <Content Include="RegistrationView.aspx" />
     <Content Include="ReservationsView.aspx" />
     <Content Include="SlotsView.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdminCampus.aspx.cs">
