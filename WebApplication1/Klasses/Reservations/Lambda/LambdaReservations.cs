@@ -67,9 +67,10 @@ namespace WebApplication1.Klasses.Reservations.linq
         }
         public Reservation SetDeleteReservationRowById()
         {
-            Reservation reservation = (from Reservation r in List.DB_Reservations
-                                           where r.Id.Equals(this.Id)
+            Reservation reservation = (from Reservation r in List.dataClassContext.Reservations
+                                           where r.Slot_id.Equals(this.Id)
                                            select r).Single();
+
             this.List.dataClassContext.Reservations.DeleteOnSubmit(reservation);
             this.List.dataClassContext.SubmitChanges();
             return reservation;

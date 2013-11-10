@@ -32,13 +32,8 @@
     <th></th>
   </tr>
     </table>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="Id" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnLoad="GridView1_Load" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" OnLoad="GridView1_Load" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <AlternatingRowStyle BackColor="White" />
-            <Columns>
-                <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
-                <asp:BoundField DataField="Slot_id" HeaderText="Slot_id" SortExpression="Slot_id" />
-                <asp:BoundField DataField="Lecturer_id" HeaderText="Lecturer_id" SortExpression="Lecturer_id" />
-            </Columns>
             <EditRowStyle BackColor="#2461BF" />
             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -51,6 +46,10 @@
             <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT * FROM [Reservations]"></asp:SqlDataSource>
+        <asp:Table ID="Table1" runat="server" Height="46px" Width="577px">
+        </asp:Table>
+        <asp:Panel ID="Panel1" runat="server" style="margin-left: 632px" Width="57px">
+        </asp:Panel>
     </form>
 </body>
 </html>

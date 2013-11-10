@@ -9,8 +9,7 @@ namespace WebApplication1.Klasses.Slots.linq
 {
     public class LambdaSlots
     {
-        private const int AVAILABILITY_DOWN = 1;
-        private const int RESERVED_UP = 1;
+        private const int AVAILABILITY_DOWN_UP = 1;
         private const int MINIMUM_CAPACITY = 0;
         private Entity Entity;
         public int ID { set; get; }
@@ -45,16 +44,27 @@ namespace WebApplication1.Klasses.Slots.linq
             this.Digital = digital;
         }
 
-        public Slot SetSlotsUpdateData()
+        public Slot SetSlotsUpdateDataCountDown()
         {
             var slots = Entity.dataClassContext.Slots
                 .Where(z =>
                           z.Id.Equals(this.ID)
                        ).ToList().First();
-            slots.Available = slots.Available - AVAILABILITY_DOWN;
+            slots.Available = slots.Available - AVAILABILITY_DOWN_UP;
             Entity.dataClassContext.SubmitChanges();
             return slots;
         }
+        public Slot SetSlotsUpdateDataCountUp()
+        {
+            var slots = Entity.dataClassContext.Slots
+                .Where(z =>
+                          z.Id.Equals(this.ID)
+                       ).ToList().First();
+            slots.Available = slots.Available + AVAILABILITY_DOWN_UP;
+            Entity.dataClassContext.SubmitChanges();
+            return slots;
+        }
+
         public Slot SetDataInsert()
         {
             var slots = new Slot()
@@ -77,6 +87,13 @@ namespace WebApplication1.Klasses.Slots.linq
                     x.Id.Equals(this.ID)
                     && x.Available.Equals(MINIMUM_CAPACITY));
             return result;
+        }
+        public List<Slots> GetRecordsByLecturerId()
+        {
+            List<Slots> list = this.Entity.DB_Slots
+                .Where(x =>
+                    x.ID.Equals(this.ID)).ToList();
+            return list;
         }
     }
 }

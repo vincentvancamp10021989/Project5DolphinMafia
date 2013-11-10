@@ -120,6 +120,7 @@
     <Compile Include="Klasses\Lecturers\Lecturers.cs" />
     <Compile Include="Klasses\Reservations\Lambda\LambdaReservations.cs" />
     <Compile Include="Klasses\Reservations\Reservations.cs" />
+    <Compile Include="Klasses\Reservations\Table\TableReservation.cs" />
     <Compile Include="Klasses\SessionEnum.cs" />
     <Compile Include="Klasses\Slots\Lambda\LambdaSlots.cs" />
     <Compile Include="Klasses\Slots\Slots.cs" />
