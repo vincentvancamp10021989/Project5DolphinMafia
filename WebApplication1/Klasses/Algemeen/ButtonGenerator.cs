@@ -31,14 +31,16 @@ namespace WebApplication1.Klasses.Algemeen
         public System.Web.UI.WebControls.Button WriteButton(int x, string stringID)
         {
             this.entity = new Entity();
-            lambdaSlots = new LambdaSlots(entity.DB_Slots.ElementAt(x).ID);
+            this.lambdaSlots = new LambdaSlots(entity.DB_Slots.ElementAt(x).ID);
+
+            this.lambdaReservations = new LambdaReservations(this.lambdaSlots.ID);
 
             this.Bord[x] = new System.Web.UI.WebControls.Button();
             this.Bord[x].Width = GROTEBUTTON_X;
             this.Bord[x].Height = GROTEBUTTON_Y;
             this.Bord[x].CommandName = stringID;
 
-            if (!lambdaSlots.GetControlAvailibe())
+            if (!lambdaSlots.GetControlAvailibe() && !this.lambdaReservations.GetCheckReservationBySlotID())
                 this.Bord[x].Text = stringID;
             else
             {

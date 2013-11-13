@@ -60,6 +60,16 @@ namespace WebApplication1.Klasses.Reservations.linq
                     && x.SlotID.Equals(Convert.ToInt32(HttpContext.Current.Session[SessionEnum.SessionNames.SlotsID.ToString()])));
             return result;
         }
+
+        public Boolean GetCheckReservationBySlotID()
+        {
+            Boolean result = this.List.DB_Reservations
+                .Any(x =>
+                    x.LecturerID.Equals(Convert.ToInt32(HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()]))
+                    && x.SlotID.Equals(this.Id));
+            return result;
+        }
+
         public Boolean GetCheckDatabaseRowID()
         {
             bool result = this.List.DB_Reservations
