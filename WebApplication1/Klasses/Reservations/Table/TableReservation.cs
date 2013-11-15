@@ -5,13 +5,15 @@ using System.Web;
 using WebApplication1.Klasses.Reservations.linq;
 using WebApplication1.Klasses.Slots;
 using WebApplication1.Klasses.Connection;
+using System.Web.UI.WebControls;
 
 namespace WebApplication1.Klasses.Reservations.Table
 {
     public class TableReservation
     {
-        public List<Reservations> List { set; get; }
-        public TableReservation(List<Reservations> list)
+        public List<Slots.Slots> List { set; get; }
+        public int Index { set; get; }
+        public TableReservation(List<Slots.Slots> list)
         {
             this.List = list;
         }
@@ -36,5 +38,60 @@ namespace WebApplication1.Klasses.Reservations.Table
             }
             return list;
         }
+
+
+        public TableRow GetTableDate()
+        {
+            TableRow tRow = new TableRow();
+            TableCell date = new TableCell();
+            date.Text = this.List.ElementAt(this.Index).Date.ToString();
+            tRow.Cells.Add(date);
+            return tRow;
+        }
+        public TableRow GetTableDateBegin()
+        {
+            TableRow tRow = new TableRow();
+            TableCell dateCell = new TableCell();
+            dateCell.Text = this.List.ElementAt(this.Index).StartTime.ToString();
+            tRow.Cells.Add(dateCell);
+            return tRow;
+        }
+        public TableRow GetTableDateEnd()
+        {
+            TableRow tRow = new TableRow();
+            TableCell dateEind = new TableCell();
+            dateEind.Text = this.List.ElementAt(this.Index).EndTime.ToString();
+            tRow.Cells.Add(dateEind);
+            return tRow;
+        }
+        public TableRow GetTableDuration()
+        {
+            TableRow tRow = new TableRow();
+            TableCell dateDuur = new TableCell();
+            dateDuur.Text = this.List.ElementAt(this.Index).Duration.ToString();
+            tRow.Cells.Add(dateDuur);
+            return tRow;
+        }
+
+        public TableRow GetTableDigital()
+        {
+            TableRow tRow = new TableRow();
+            TableCell dateDigital = new TableCell();
+            dateDigital.Text = this.List.ElementAt(this.Index).Digital.ToString();
+            tRow.Cells.Add(dateDigital);
+            return tRow;
+        }
+
+        public TableRow GetTableLocation()
+        {
+            TableRow tRow = new TableRow();
+            TableCell dateLocation = new TableCell();
+            dateLocation.Text = this.List.ElementAt(this.Index).Campus.ToString();
+            tRow.Cells.Add(dateLocation);
+            return tRow;
+        }
+
+
+
     }
 }

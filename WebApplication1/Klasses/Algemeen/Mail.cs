@@ -135,8 +135,8 @@ namespace WebApplication1.Klasses.Algemeen
         {
             this.MailMessager = new MailMessage();
             this.SmtpClients = new SmtpClient();
-            this.EmailAdmin = "jimbo_mt_18@hotmail.com"; // GMAIL ACCOUNT.
-            this.PasswordEmailAdmin = "........";
+            this.EmailAdmin = ""; // GMAIL ACCOUNT.
+            this.PasswordEmailAdmin = "";
         }
         public Mail(string toMailAdress)
             :this()
