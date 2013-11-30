@@ -115,6 +115,27 @@ namespace WebApplication1.Klasses.Connection
                            ).ToList();
                 return db_Reservations;
             }
-        }      
+        }
+
+        private List<Motd.Motd> db_Motd = new List<Motd.Motd>();
+        public List<Motd.Motd> DB_Motd
+        {
+            set
+            {
+                DB_Motd = value;
+            }
+            get
+            {
+                db_Motd = dataClassContext.Motds.AsEnumerable()
+                    .Select(x => new Motd.Motd()
+                    {
+                        Id = x.Id,
+                        Message = x.Message
+                        
+                    }
+                            ).ToList();
+                return db_Motd;
+            }
+        }
     }
 }

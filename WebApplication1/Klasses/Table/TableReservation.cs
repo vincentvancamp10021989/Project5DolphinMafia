@@ -9,15 +9,15 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication1.Klasses.Reservations.Table
 {
-    public class TableReservation
+    public class TableAP
     {
         public List<Slots.Slots> List { set; get; }
         public int Index { set; get; }
-        public TableReservation(List<Slots.Slots> list)
+        public TableAP(List<Slots.Slots> list)
         {
             this.List = list;
         }
-        public TableReservation()
+        public TableAP()
         {
         }
 
@@ -70,6 +70,22 @@ namespace WebApplication1.Klasses.Reservations.Table
             TableCell dateDuur = new TableCell();
             dateDuur.Text = this.List.ElementAt(this.Index).Duration.ToString();
             tRow.Cells.Add(dateDuur);
+            return tRow;
+        }
+        public TableRow GetTableAvailibility()
+        {
+            TableRow tRow = new TableRow();
+            TableCell dateAvailibility = new TableCell();
+            dateAvailibility.Text = this.List.ElementAt(this.Index).Availibility.ToString();
+            tRow.Cells.Add(dateAvailibility);
+            return tRow;
+        }
+        public TableRow GetTableCapacity()
+        {
+            TableRow tRow = new TableRow();
+            TableCell dateCapacity = new TableCell();
+            dateCapacity.Text = this.List.ElementAt(this.Index).Capacity.ToString();
+            tRow.Cells.Add(dateCapacity);
             return tRow;
         }
 

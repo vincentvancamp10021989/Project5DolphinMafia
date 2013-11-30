@@ -14,6 +14,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()] = string.Empty;
+            Session[SessionEnum.SessionNames.AccessLvl.ToString()] = string.Empty;
             HttpContext.Current.Response.Redirect(NEXT_PAGE);
         }
     }

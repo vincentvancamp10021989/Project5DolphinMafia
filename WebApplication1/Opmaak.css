@@ -1,0 +1,52 @@
+﻿@charset "utf-8";
+
+div.banner
+{
+	margin:auto;
+	background-image:url(images/logo.png);
+	width: 229px;
+	height: 26px;
+	
+}
+head
+{}
+body
+{
+	width:auto;
+	background-color:#FFFFFF;
+	
+}
+div.content
+{
+	border-radius: 20px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px !important ;
+	padding: 15px;
+	margin-top: 50px !important ;
+	margin:auto;
+	width: 80%;
+	background-color:#CCCCCC;
+	}
+input[type="submit"]
+    {
+		background-color:#666;
+		color:#FFFFFF;
+		border-radius: 15px;
+		border-color:#333;
+		
+    }
+ input[type="submit"]:Hover  
+    {
+		background-color:#000000;
+    }
+input:focus
+	{
+	background-color:#FFFFCC;
+	} 
+h3
+{
+	color:#C00 !important ;
+	font-style:oblique;
+}
+
+

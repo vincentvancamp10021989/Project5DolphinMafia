@@ -3,3 +3,10 @@ C:\GitProject\WebApplication1\UnitTestProject5\bin\Debug\UnitTestProject5.pdb
 C:\GitProject\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.csprojResolveAssemblyReference.cache
 C:\GitProject\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.dll
 C:\GitProject\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.pdb
+D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\UnitTestProject5\bin\Debug\UnitTestProject5.dll
+D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\UnitTestProject5\bin\Debug\UnitTestProject5.pdb
+D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\UnitTestProject5\bin\Debug\WebApplication1.dll
+D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\UnitTestProject5\bin\Debug\WebApplication1.pdb
+D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.csprojResolveAssemblyReference.cache
+D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.dll
+D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\UnitTestProject5\obj\Debug\UnitTestProject5.pdb

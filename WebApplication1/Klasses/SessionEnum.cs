@@ -10,7 +10,9 @@ namespace WebApplication1.Klasses
         public enum SessionNames
         {
             LecturorsID,
-            SlotsID
+            SlotsID,
+            AccessLvl,
+            CampusName
         }
     }
 }

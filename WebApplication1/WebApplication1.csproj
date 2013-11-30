@@ -67,12 +67,18 @@
     <Content Include="AdminMain.aspx" />
     <Content Include="AdminSlots.aspx" />
     <Content Include="AdminSlotsUpdate.aspx" />
+    <Content Include="AdminUsers.aspx" />
+    <Content Include="ExportReservaties.aspx" />
     <Content Include="images\artesis.jpg" />
+    <Content Include="images\logo.png" />
     <Content Include="LoginView.aspx" />
     <Content Include="Logout.aspx" />
+    <Content Include="Opmaak.css" />
     <Content Include="RegistrationView.aspx" />
     <Content Include="ReservationsView.aspx" />
     <Content Include="SlotsView.aspx" />
+    <Content Include="testje.txt" />
+    <Content Include="UserChangePass.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -106,10 +112,24 @@
     <Compile Include="AdminSlotsUpdate.aspx.designer.cs">
       <DependentUpon>AdminSlotsUpdate.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminUsers.aspx.cs">
+      <DependentUpon>AdminUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminUsers.aspx.designer.cs">
+      <DependentUpon>AdminUsers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="ExportReservaties.aspx.cs">
+      <DependentUpon>ExportReservaties.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportReservaties.aspx.designer.cs">
+      <DependentUpon>ExportReservaties.aspx</DependentUpon>
     </Compile>
     <Compile Include="Klasses\Algemeen\Hash.cs" />
     <Compile Include="Klasses\Algemeen\ButtonGenerator.cs" />
@@ -118,14 +138,17 @@
     <Compile Include="Klasses\Campus\Campus.cs" />
     <Compile Include="Klasses\Campus\Lambda\LambdaCampus.cs" />
     <Compile Include="Klasses\Connection\Entity.cs" />
+    <Compile Include="Klasses\Export\Lambda\LambdaExport.cs" />
     <Compile Include="Klasses\Lecturers\Lambda\LambdaLecturers.cs" />
     <Compile Include="Klasses\Lecturers\Lecturers.cs" />
+    <Compile Include="Klasses\Motd\Lambda\LambdaMotd.cs" />
+    <Compile Include="Klasses\Motd\Motd.cs" />
     <Compile Include="Klasses\Reservations\Lambda\LambdaReservations.cs" />
     <Compile Include="Klasses\Reservations\Reservations.cs" />
-    <Compile Include="Klasses\Reservations\Table\TableReservation.cs" />
     <Compile Include="Klasses\SessionEnum.cs" />
     <Compile Include="Klasses\Slots\Lambda\LambdaSlots.cs" />
     <Compile Include="Klasses\Slots\Slots.cs" />
+    <Compile Include="Klasses\Table\TableReservation.cs" />
     <Compile Include="LoginView.aspx.cs">
       <DependentUpon>LoginView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -162,6 +185,13 @@
     <Compile Include="SlotsView.aspx.designer.cs">
       <DependentUpon>SlotsView.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserChangePass.aspx.cs">
+      <DependentUpon>UserChangePass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserChangePass.aspx.designer.cs">
+      <DependentUpon>UserChangePass.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataClasses1.dbml">
@@ -169,6 +199,7 @@
       <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="Properties\PublishProfiles\peekaboo.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

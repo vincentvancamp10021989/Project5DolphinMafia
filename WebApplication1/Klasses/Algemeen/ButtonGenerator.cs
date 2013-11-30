@@ -14,7 +14,7 @@ namespace WebApplication1.Klasses.Algemeen
     {
         public System.Web.UI.WebControls.Button[] Bord { set; get; }
         public const int GROTEBUTTON_X = 50;
-        public const int GROTEBUTTON_Y = 30;
+        public const int GROTEBUTTON_Y = 24;
         private const string SLOT_PAGE = "SlotsView.aspx";
         private const string RESERVATION_PAGE = "ReservationsView.aspx";
         private LambdaSlots lambdaSlots;

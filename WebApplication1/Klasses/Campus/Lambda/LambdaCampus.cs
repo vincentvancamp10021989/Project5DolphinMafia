@@ -16,10 +16,12 @@ namespace WebApplication1.Klasses.Campus.Lambda
             this.Entity = new Entity();
         }
         public LambdaCampus(string campusName)
-            :this()
+            : this()
         {
             this.CampusName = campusName;
         }
+
+
         public WebApplication1.Campus SetCampusInsert()
         {
             var campus = new WebApplication1.Campus()
@@ -40,6 +42,14 @@ namespace WebApplication1.Klasses.Campus.Lambda
         public List<Campus> GetUniekCampusList()
         {
             List<Campus> list = this.Entity.DB_Campus.Distinct().ToList();
+            return list;
+        }
+
+        public List<Slots.Slots> GetFilterToCampus()
+        {
+            var list = this.Entity.DB_Slots
+                .Where(x =>
+                    x.Campus.Equals(this.CampusName)).ToList();
             return list;
         }
 

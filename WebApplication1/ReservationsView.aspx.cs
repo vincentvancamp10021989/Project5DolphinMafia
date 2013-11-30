@@ -33,8 +33,8 @@ namespace WebApplication1
             }
 
 
-            List<Slots> list = new TableReservation().GetTableReservationsByLecturerID();
-            TableReservation tableReservation = new TableReservation(list);
+            List<Slots> list = new TableAP().GetTableReservationsByLecturerID();
+            TableAP tableReservation = new TableAP(list);
             int rowCnt = list.Count;
 
             for (int i = 0; i < tableReservation.List.Count; i++)
@@ -46,6 +46,7 @@ namespace WebApplication1
                 this.tableDigitaal.Rows.Add(tableReservation.GetTableDigital());
                 this.tableDuur.Rows.Add(tableReservation.GetTableDuration());
                 this.tableLocatie.Rows.Add(tableReservation.GetTableLocation());
+
             }
 
 

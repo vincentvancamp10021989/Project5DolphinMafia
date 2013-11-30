@@ -95,5 +95,15 @@ namespace WebApplication1.Klasses.Slots.linq
                     x.ID.Equals(this.ID)).ToList();
             return list;
         }
+        public Slot SetDeleteSlotRowById()
+        {
+            Slot slot = (from Slot r in this.Entity.dataClassContext.Slots
+                                       where r.Id.Equals(this.ID)
+                                       select r).First();
+
+            this.Entity.dataClassContext.Slots.DeleteOnSubmit(slot);
+            this.Entity.dataClassContext.SubmitChanges();
+            return slot;
+        }
     }
 }

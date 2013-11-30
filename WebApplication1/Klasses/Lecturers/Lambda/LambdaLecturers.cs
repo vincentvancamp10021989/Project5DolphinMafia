@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Windows.Forms;
 using WebApplication1.Klasses.Algemeen;
@@ -51,10 +52,12 @@ namespace WebApplication1.Klasses.Login.linq
             }
         }
         public string EMail { set; get; }
+        public int Id { get; set; }
         //public string Password { set; get; }
         private string Firstname { set; get; }
         private string Lastname { set; get; }
         public Entity Entity { set; get; }
+        private const string EMailHostAP = "@ap.be";
         #endregion
 
         #region Constructors
@@ -63,17 +66,17 @@ namespace WebApplication1.Klasses.Login.linq
             this.Entity = new Entity();
         }
         public LambdaLecturers(string email)
-            :this()
+            : this()
         {
             this.EMail = email;
         }
         public LambdaLecturers(string email, string password)
-            :this(email)
+            : this(email)
         {
             this.Password = password;
         }
         public LambdaLecturers(string email, string password, string firstname, string lastname)
-            :this(email, password)
+            : this(email, password)
         {
             this.Firstname = firstname;
             this.Lastname = lastname;
@@ -123,14 +126,13 @@ namespace WebApplication1.Klasses.Login.linq
             Entity.dataClassContext.SubmitChanges();
             return lecturer;
         }
-
         public Lecturer SetLecturersInsertData()
         {
             Lecturer lecturers = new Lecturer()
             {
                 Firstname = this.Firstname,
                 Lastname = this.Lastname,
-                Email = this.EMail,
+                Email = this.EMail + EMailHostAP,
                 Access = 1,
                 Password = Hash.Password_Encryption_md5(this.Password)
             };
@@ -138,6 +140,33 @@ namespace WebApplication1.Klasses.Login.linq
             Entity.dataClassContext.SubmitChanges();
 
             return lecturers;
+        }
+
+        public bool GetCheckEmailAP()
+        {
+            Match m = Regex.Match(this.EMail, @"[A-Za-z0-9]+$", RegexOptions.IgnoreCase);
+            return m.Success;
+        }
+
+        public Lecturer ChangePasswordFromId(string newPass)
+        {
+            var lecturer = Entity.dataClassContext.Lecturers
+                .Where(z =>
+                          z.Id.Equals(this.Id)
+                       ).ToList().First();
+            lecturer.Password = Hash.Password_Encryption_md5(newPass);
+            Entity.dataClassContext.SubmitChanges();
+            return lecturer;
+        }
+
+        public string GetPasswordFromId()
+        {
+            var lecturer = Entity.dataClassContext.Lecturers
+                .Where(z =>
+                          z.Id.Equals(this.Id)
+                       ).ToList().First();
+            string pass = lecturer.Password;
+            return pass;
         }
     }
 }

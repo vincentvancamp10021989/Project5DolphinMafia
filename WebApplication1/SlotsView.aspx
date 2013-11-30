@@ -6,60 +6,68 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Examonitor</title>
-    <style type="text/css">
-        .auto-style2 {
-            width: 53px;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
     <asp:Image  ID="Logo" runat="server" ImageUrl="~/images/artesis.jpg" 
                     BorderStyle="None" width="370" />
 
-    <h2>Toezichtsbeurten BLS</h2>
+    <h2>
+
+<asp:Button ID="buttonLogout" runat="server" Text="Logout" OnClick="Button1_Click" Width="75px" />
+
+        </h2>
+        <h2>Toezichtsbeurten BLS</h2>
+        <asp:DropDownList ID="dropDownListCampus" runat="server" DataSourceID="UniekCampus" DataTextField="Plaats" DataValueField="Plaats">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="UniekCampus" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT [Plaats] FROM [Campus]"></asp:SqlDataSource>
+        <asp:Button ID="buttonKies" runat="server" Text="Kies" OnClick="buttonKies_Click" Width="75px" />
+
+<h3>Toezichtsbeurten voor :  Antwerpen</h3>
 <br />
-<br />
-Toezichtsbeurten voor :  Antwerpen
-<br />
-<br />
+
 <a href="/ReservationsView.aspx">Mijn reservaties</a>
+        <br />
+        <br />
 <br />
-<br />
-<br />
-      <!--  <asp:Panel ID="Panel2" runat="server" Height="1040px" style="margin-left: 0px" Width="906px"> -->
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" >
-                <AlternatingRowStyle BackColor="White" />
-                <Columns>
-                    <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
-                    <asp:BoundField DataField="Start" HeaderText="Start" SortExpression="Start" />
-                    <asp:BoundField DataField="End" HeaderText="End" SortExpression="End" />
-                    <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
-                    <asp:BoundField DataField="Available" HeaderText="Available" SortExpression="Available" />
-                    <asp:BoundField DataField="Capacity" HeaderText="Capacity" SortExpression="Capacity" />
-                    <asp:BoundField DataField="Digital" HeaderText="Digital" SortExpression="Digital" />
-                    <asp:BoundField DataField="Campus" HeaderText="Campus" SortExpression="Campus" />
-                </Columns>
-                <EditRowStyle BackColor="#2461BF" />
-                <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#EFF3FB" />
-                <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                <SortedDescendingHeaderStyle BackColor="#4870BE" />
-            </asp:GridView>
-        <Table style="width: 593px">
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT [Date], [Start], [End], [Duration], [Available], [Capacity], [Digital], [Campus] FROM [Slots]"></asp:SqlDataSource>
-            <asp:Panel ID="Panel1" runat="server" Height="1003px" style="margin-left: auto; margin-right: 500px; margin-top: 30px;" Width="27px">
-            </asp:Panel>
-             </Table>
-
-
-            
-       <!-- </asp:Panel> -->
+      
+   <table border ="1" style="margin:0px auto; width:500px">
+    <thead>
+  <tr>
+    <th class="auto-style35">Datum</th>
+    <th class="auto-style37">Begin</th>
+    <th class="auto-style35">Einde</th>
+    <th class="auto-style37">Duur</th>
+    <th class="auto-style39">Capaciteit</th>
+    <th class="auto-style1">Beschikbaar</th>
+    <th class="auto-style1">Locatie</th>
+     <th class="auto-style1">Digitaal</th>
+  </tr>
+        </thead>
+    <tr>
+        <td class="auto-style36"><asp:Table ID="tableDatum" runat="server">
+        </asp:Table></td>
+        <td class="auto-style38"><asp:Table ID="tableBegin" runat="server">
+        </asp:Table></td>
+        <td class="auto-style36"><asp:Table ID="tableEind" runat="server">
+        </asp:Table></td>
+        <td class="auto-style38"><asp:Table ID="tableDuur" runat="server">
+        </asp:Table></td>
+        <td class="auto-style38"><asp:Table ID="tableCapaciteit" runat="server">
+        </asp:Table></td>
+         <td class="auto-style40"><asp:Table ID="tableBeschikbaar" runat="server">
+        </asp:Table></td>
+        <td class="auto-style17"><asp:Table ID="tableLocatie" runat="server">
+        </asp:Table></td>
+        <td class="auto-style40"><asp:Table ID="tableDigitaal" runat="server">
+        </asp:Table></td>
+        
+        
+        <td class="auto-style19"><asp:Panel ID="Panel1" runat="server" style="margin-left: auto" Width="80px">
+        </asp:Panel></td>
+    </tr>
+    </table>
+   
 
 <br />
 <br />
