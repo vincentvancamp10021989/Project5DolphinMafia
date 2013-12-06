@@ -138,6 +138,7 @@
     <Compile Include="Klasses\Campus\Campus.cs" />
     <Compile Include="Klasses\Campus\Lambda\LambdaCampus.cs" />
     <Compile Include="Klasses\Connection\Entity.cs" />
+    <Compile Include="Klasses\Export\Export.cs" />
     <Compile Include="Klasses\Export\Lambda\LambdaExport.cs" />
     <Compile Include="Klasses\Lecturers\Lambda\LambdaLecturers.cs" />
     <Compile Include="Klasses\Lecturers\Lecturers.cs" />

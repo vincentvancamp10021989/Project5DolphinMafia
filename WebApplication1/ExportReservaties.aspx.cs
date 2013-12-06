@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -8,6 +9,7 @@ using System.Web.UI.WebControls;
 using System.Xml;
 using System.Xml.Linq;
 using WebApplication1.Klasses.Connection;
+using WebApplication1.Klasses.Export;
 using WebApplication1.Klasses.Export.Lambda;
 using WebApplication1.Klasses.Reservations.Table;
 using WebApplication1.Klasses.Slots;
@@ -27,41 +29,24 @@ namespace WebApplication1
                                            && r.Lecturer_id.Equals(Convert.ToInt32(HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()]))
                                            select r).First();
          */
+
+
         protected void BtnExport_Click(object sender, EventArgs e)
         {
-            
+
             LambdaExport le = new LambdaExport();
             List<Slots> query = le.SelectSlots();
+            Export exp = new Export();
+            var xEle = exp.MakeXml(query);
 
-            TableAP t = new TableAP(query.ToList());
-            for (int i = 0; i < t.List.Count; i++)
-            {
-                t.Index = i;
-                this.Table1.Rows.Add(t.GetTableID());
-            }
+            string path = MapPath(@"~\myxml.xml");
+            string name = Path.GetFileName(path);
+            Response.ClearContent();
+            Response.AppendHeader("content-disposition", "attachment; filename=" + name);
+            Response.ContentType = "text/xml";
+            Response.Write(xEle.ToString());
+            Response.End();
 
-            try
-            {
-                var xEle = new XElement("Reservations",
-                            from s in query
-                            select new XElement("reservation",
-                                         new XElement("Datum", s.Date),
-                                           new XElement("Begin_uur", s.StartTime),
-                                           new XElement("Duur", s.Duration),
-                                           new XElement("Capaciteit", s.Capacity),
-                                           new XElement("Locatie", s.Campus),
-                                           new XElement("Digitaal", s.Digital)
-                                       ));
-                string path = Server.MapPath("~/");
-                string filename = FileUpload1.PostedFile.FileName;
-                xEle.Save(path + filename);
-                Console.WriteLine("Converted to XML");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            
         }
     }
 }

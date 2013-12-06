@@ -8,3 +8,5 @@ D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\WebApplication1\bi
 D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\johan\Desktop\testGit\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\johan\Desktop\testGit\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.dll
