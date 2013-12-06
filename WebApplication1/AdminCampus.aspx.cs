@@ -33,5 +33,6 @@ namespace WebApplication1
             this.lambdaCampus.SetCampusInsert();
             Response.Redirect("AdminCampus.aspx");
         }
+        //yolo
     }
 }
