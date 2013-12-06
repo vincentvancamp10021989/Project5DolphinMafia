@@ -15,8 +15,6 @@
     </div>
         <asp:Table ID="Table1" runat="server">
         </asp:Table>
-        <br />
-        <asp:FileUpload ID="FileUpload1" runat="server" />
     </form>
 </body>
 </html>
