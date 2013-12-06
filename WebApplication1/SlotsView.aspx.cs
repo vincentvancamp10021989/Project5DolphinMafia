@@ -52,7 +52,7 @@ namespace WebApplication1
                 this.tableDuur.Rows.Add(table.GetTableDuration());
                 this.tableLocatie.Rows.Add(table.GetTableLocation());
                 this.tableBeschikbaar.Rows.Add(table.GetTableAvailibility());
-                this.tableCapaciteit.Rows.Add(table.GetTableAvailibility());
+                this.tableCapaciteit.Rows.Add(table.GetTableCapacity());
 
                 Panel1.Controls.Add(buttons.WriteButton(i, table.List.ElementAt(i).ID.ToString()));
                 this.buttons.ClickSlots(i);
