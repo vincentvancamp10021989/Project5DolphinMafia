@@ -11,49 +11,64 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminCampus.aspx">
-      <publishTime>11/15/2013 14:40:31</publishTime>
+      <publishTime>12/06/2013 11:28:30</publishTime>
     </File>
     <File Include="AdminMain.aspx">
-      <publishTime>11/22/2013 16:10:21</publishTime>
+      <publishTime>12/06/2013 11:28:30</publishTime>
     </File>
     <File Include="AdminSlots.aspx">
-      <publishTime>11/15/2013 14:42:34</publishTime>
+      <publishTime>12/06/2013 11:28:30</publishTime>
     </File>
     <File Include="AdminSlotsUpdate.aspx">
-      <publishTime>11/08/2013 19:29:40</publishTime>
+      <publishTime>12/06/2013 11:28:30</publishTime>
     </File>
     <File Include="AdminUsers.aspx">
-      <publishTime>11/22/2013 16:09:36</publishTime>
+      <publishTime>12/06/2013 11:28:30</publishTime>
     </File>
     <File Include="bin/WebApplication1.dll">
-      <publishTime>11/22/2013 16:29:49</publishTime>
+      <publishTime>12/06/2013 15:46:23</publishTime>
     </File>
     <File Include="bin/WebApplication1.pdb">
-      <publishTime>11/22/2013 16:29:49</publishTime>
+      <publishTime>12/06/2013 15:46:23</publishTime>
     </File>
     <File Include="DataClasses1.dbml">
-      <publishTime>11/22/2013 15:38:58</publishTime>
+      <publishTime>12/06/2013 11:28:30</publishTime>
+    </File>
+    <File Include="ExportReservaties.aspx">
+      <publishTime>12/06/2013 12:24:10</publishTime>
     </File>
     <File Include="images/artesis.jpg">
-      <publishTime>10/25/2013 15:11:45</publishTime>
+      <publishTime>12/06/2013 11:28:31</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>12/06/2013 11:28:31</publishTime>
     </File>
     <File Include="LoginView.aspx">
-      <publishTime>11/22/2013 16:02:50</publishTime>
+      <publishTime>12/06/2013 11:28:30</publishTime>
     </File>
     <File Include="Logout.aspx">
-      <publishTime>11/09/2013 18:55:55</publishTime>
+      <publishTime>12/06/2013 11:28:31</publishTime>
+    </File>
+    <File Include="Opmaak.css">
+      <publishTime>12/06/2013 11:28:31</publishTime>
     </File>
     <File Include="RegistrationView.aspx">
-      <publishTime>11/22/2013 15:16:02</publishTime>
+      <publishTime>12/06/2013 11:28:31</publishTime>
     </File>
     <File Include="ReservationsView.aspx">
-      <publishTime>11/15/2013 16:25:42</publishTime>
+      <publishTime>12/06/2013 11:28:31</publishTime>
     </File>
     <File Include="SlotsView.aspx">
-      <publishTime>11/22/2013 15:56:05</publishTime>
+      <publishTime>12/06/2013 11:28:31</publishTime>
+    </File>
+    <File Include="testje.txt">
+      <publishTime>12/06/2013 11:28:31</publishTime>
+    </File>
+    <File Include="UserChangePass.aspx">
+      <publishTime>12/06/2013 11:28:31</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/22/2013 16:30:31</publishTime>
+      <publishTime>12/06/2013 15:46:26</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -70,5 +70,10 @@ namespace WebApplication1
         {
             HttpContext.Current.Response.Redirect("Logout.aspx");
         }
+
+        protected void btnReservations_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ReservationsView.aspx");
+        }
     }
 }

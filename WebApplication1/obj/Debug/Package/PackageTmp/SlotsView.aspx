@@ -12,15 +12,23 @@
     <asp:Image  ID="Logo" runat="server" ImageUrl="~/images/artesis.jpg" 
                     BorderStyle="None" width="370" />
 
-    <h2>Toezichtsbeurten BLS</h2>
+    <h2>
+
+<asp:Button ID="buttonLogout" runat="server" Text="Logout" OnClick="Button1_Click" Width="75px" />
+
+        </h2>
+        <h2>Toezichtsbeurten BLS</h2>
+        <asp:DropDownList ID="dropDownListCampus" runat="server" DataSourceID="UniekCampus" DataTextField="Plaats" DataValueField="Plaats">
+        </asp:DropDownList>
+        <asp:SqlDataSource ID="UniekCampus" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT [Plaats] FROM [Campus]"></asp:SqlDataSource>
+        <asp:Button ID="buttonKies" runat="server" Text="Kies" OnClick="buttonKies_Click" Width="75px" />
+
+<h3>Toezichtsbeurten voor :  Antwerpen</h3>
 <br />
-<br />
-Toezichtsbeurten voor :  Antwerpen
-<br />
-<br />
+
 <a href="/ReservationsView.aspx">Mijn reservaties</a>
-<br />
-<br />
+        <br />
+        <br />
 <br />
       
    <table border ="1" style="margin:0px auto; width:500px">

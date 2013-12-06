@@ -26,9 +26,8 @@
 <h3>Toezichtsbeurten voor :  Antwerpen</h3>
 <br />
 
-<a href="/ReservationsView.aspx">Mijn reservaties</a>
-        <br />
-        <br />
+        <asp:Button ID="btnReservations" runat="server" OnClick="btnReservations_Click" Text="Mijn reservaties" />
+
 <br />
       
    <table border ="1" style="margin:0px auto; width:500px">

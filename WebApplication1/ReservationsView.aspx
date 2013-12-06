@@ -50,7 +50,9 @@
 <br />
 <br />
 <br />
-<a href="/SlotsView.aspx">Terug naar overzicht</a>
+
+        <asp:Button ID="btnTerug" runat="server" OnClick="btnTerug_Click" Text="Terug naar overzicht" />
+
 <br />
 <br />
 <br />

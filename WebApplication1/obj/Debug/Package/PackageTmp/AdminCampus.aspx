@@ -1,20 +1,23 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminCampus.aspx.cs" Inherits="WebApplication1.AdminCampus" %>
-
+<link rel="stylesheet" type="text/css" href="opmaak.css">
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title></title>
+
+<head>
+    <title>AP Registratie</title>
 </head>
+
+
 <body>
+    <div class="banner"></div>
+    <div class="content">
+
     <form id="form1" runat="server">
     <div>
-        <table>
+         <p>Niewe campus toevoegen:</p>
+     <table>
         <tr>
-            <td colspan="2" align="center">Nieuwe Campus Toevoegen</td>
-        </tr>
-        <tr>
-            <td>Plaats:</td>
+            <td>Locatie:</td>
             <td>
                 <asp:TextBox ID="txtboxCampusPlaats" runat="server"></asp:TextBox>
             </td>
@@ -40,6 +43,7 @@
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT * FROM [Campus]"></asp:SqlDataSource>
     </div>
     </form>
+    </div>
 </body>
 </html>
 

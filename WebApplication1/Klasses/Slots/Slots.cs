@@ -13,7 +13,7 @@ namespace WebApplication1.Klasses.Slots
         public string EndTime { set; get; }
         public string Duration { set; get; }
         public int Capacity { set; get; }
-        public byte? Digital { set; get; }
+        public int Digital { set; get; }
         public string Campus { set; get; }
         public int Availibility { set; get; }
     }

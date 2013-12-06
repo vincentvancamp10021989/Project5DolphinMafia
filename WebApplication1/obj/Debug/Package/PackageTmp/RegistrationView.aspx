@@ -7,7 +7,7 @@
     <title>Registratie</title>
     <style type="text/css">
         .auto-style1 {
-            width: 132px;
+            width: 228px;
         }
     </style>
 </head>
@@ -39,6 +39,7 @@
 <td>Email: </td>
 <td class="auto-style1">
     <asp:TextBox ID="textBoxEmail" runat="server"></asp:TextBox>
+    <asp:Label ID="LabelAtAp" runat="server" Text="@ap.be"></asp:Label>
     </td>
 </tr>
 
@@ -52,7 +53,7 @@
 </tr>
 <tr>
     <td>Wachtwoord herhalen:</td>
-    <td>
+    <td class="auto-style1">
         <asp:TextBox ID="textBoxpwdherh" runat="server" TextMode="Password"></asp:TextBox>
     </td>
 </tr>

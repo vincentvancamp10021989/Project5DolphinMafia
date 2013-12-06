@@ -66,5 +66,10 @@ namespace WebApplication1
         protected void GridView1_Load(object sender, EventArgs e)
         {
         }
+
+        protected void btnTerug_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("SlotsView.aspx");
+        }
     }
 }

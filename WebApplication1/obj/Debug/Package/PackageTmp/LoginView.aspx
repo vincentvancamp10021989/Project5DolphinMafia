@@ -1,19 +1,16 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginView.aspx.cs" Inherits="WebApplication1.LoginView" %>
-
+<link rel="stylesheet" type="text/css" href="opmaak.css">
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <title>AP Registratie</title>
 </head>
+
 <body>
-    <div id="Logo"></div>
-        <%--<asp:Image  ID="Logo" runat="server" ImageUrl="~/images/artesis.jpg" 
-                    BorderStyle="None" width="370" />--%>
+    <div class="banner"></div>
 
-
-<h2>Opgelet! De paswoorden van de vorige zit zijn niet meer geldig, gelieve een nieuw aan te vragen.</h2>
-
+<div class="content">
 <form id="form1" runat="server">
         <asp:Label ID="ErrorLabel" runat="server" Text="Verkeerd e-mail adres. Gelieve opnieuw te proberen"></asp:Label>
 
@@ -57,5 +54,6 @@
 <asp:Button ID="buttonSend" runat="server" Text="Versturen" OnClick="buttonSend_Click" />
 
 </form>
+</div>
 </body>
 </html>

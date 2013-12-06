@@ -20,7 +20,7 @@ namespace WebApplication1.Klasses.Slots.linq
         public int Capacity { set; get; }
         public int Availible { set; get; }
         public string Campus { set; get; }
-        public byte Digital { set; get; }
+        public int Digital { set; get; }
 
         public LambdaSlots()
         {
@@ -31,7 +31,7 @@ namespace WebApplication1.Klasses.Slots.linq
         {
             this.ID = id;
         }
-        public LambdaSlots(string datum, string start_hour, string end_hour, string duration, int capacity,int availible , byte digital, string campus)
+        public LambdaSlots(string datum, string start_hour, string end_hour, string duration, int capacity,int availible , int digital, string campus)
             :this()
         {
             this.Date = datum;

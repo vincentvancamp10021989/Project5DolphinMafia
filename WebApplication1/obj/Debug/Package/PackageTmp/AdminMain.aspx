@@ -1,15 +1,20 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminMain.aspx.cs" Inherits="WebApplication1.AdminMain" %>
-
+<link rel="stylesheet" type="text/css" href="opmaak.css">
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title></title>
+
+<head>
+    <title>AP Registratie</title>
 </head>
+
 <body>
+    <div class="banner"></div>
+    <div class="content">
     <form id="form1" runat="server">
     <div>
-        Admin Pagina<br />
+
+        <h1>Admin Pagina</h1>
+        <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
@@ -28,16 +33,21 @@
         <asp:TextBox ID="txtboxID" runat="server" Width="46px"></asp:TextBox>
         <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Verwijderen" />
         <br />
-        <asp:Button ID="btnAddSlot" runat="server" OnClick="btnAddSlot_Click" Text="Slot Toevoegen" Width="171px" />
-        <br />
-        <asp:Button ID="btnAddCampus" runat="server" OnClick="btnAddCampus_Click" Text="Campus Toevoegen" />
-        <br />
-        Message of the day veranderen: <asp:TextBox ID="txtboxMOTD" runat="server" Width="292px"></asp:TextBox>
+        <table>
+            <tr>
+                <td><asp:Button ID="btnAddSlot" runat="server" OnClick="btnAddSlot_Click" Text="Slot Toevoegen" Width="171px" /></td>
+                <td><asp:Button ID="btnAddCampus" runat="server" OnClick="btnAddCampus_Click" Text="Campus Toevoegen" /></td>
+            </tr>
+            <tr>
+        <td>Message of the day veranderen: <asp:TextBox ID="txtboxMOTD" runat="server" Width="292px"></asp:TextBox></td>
         <asp:Button ID="btnMOTDSend" runat="server" Text="Verzenden" />
+                </tr>
+        </table>
         <br />
         <br />
         <asp:Button ID="BtnLogOut" runat="server" OnClick="BtnLogOut_Click" Text="Log Out" />
     </div>
     </form>
+        </div>
 </body>
 </html>
