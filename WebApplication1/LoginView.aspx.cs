@@ -55,6 +55,7 @@ namespace WebApplication1
                 }
                 else
                 {
+                    HttpContext.Current.Session.Add(SessionEnum.SessionNames.CampusName.ToString(), "Antwerpen");
                     Response.Redirect(NEXT_PAGE);
                 }
             }

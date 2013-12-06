@@ -37,7 +37,7 @@ namespace WebApplication1
             int aantal_buttons = this.entity.DB_Slots.Count;
             this.buttons = new ButtonGenerator(aantal_buttons);
 
-            MessageBox.Show(HttpContext.Current.Session[SessionEnum.SessionNames.CampusName.ToString()].ToString());
+            //MessageBox.Show(HttpContext.Current.Session[SessionEnum.SessionNames.CampusName.ToString()].ToString());
 
             this.lambdaCampus = new LambdaCampus(HttpContext.Current.Session[SessionEnum.SessionNames.CampusName.ToString()].ToString());
             TableAP table = new TableAP(this.lambdaCampus.GetFilterToCampus());
@@ -62,13 +62,13 @@ namespace WebApplication1
         protected void buttonKies_Click(object sender, EventArgs e)
         {
             HttpContext.Current.Session.Add(SessionEnum.SessionNames.CampusName.ToString(), this.dropDownListCampus.Text.ToString());
-            MessageBox.Show(HttpContext.Current.Session[SessionEnum.SessionNames.CampusName.ToString()].ToString());
+            //MessageBox.Show(HttpContext.Current.Session[SessionEnum.SessionNames.CampusName.ToString()].ToString());
             HttpContext.Current.Response.Redirect(REFRESH_PAGE);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            HttpContext.Current.Response.Redirect("Logout.aspx");
         }
     }
 }

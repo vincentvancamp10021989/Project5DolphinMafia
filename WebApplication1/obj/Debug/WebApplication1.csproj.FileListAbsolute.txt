@@ -12,3 +12,6 @@ C:\Users\johan\Desktop\testGit\Project5DolphinMafia\WebApplication1\obj\Debug\We
 C:\Users\johan\Desktop\testGit\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Peekaboo\Documents\GitHub\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 C:\Users\Peekaboo\Documents\GitHub\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Peekaboo\Documents\GitHub\Project5DolphinMafia\WebApplication1\bin\WebApplication1.dll
+C:\Users\Peekaboo\Documents\GitHub\Project5DolphinMafia\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Peekaboo\Documents\GitHub\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.pdb
