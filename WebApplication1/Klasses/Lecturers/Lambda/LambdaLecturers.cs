@@ -65,6 +65,11 @@ namespace WebApplication1.Klasses.Login.linq
         {
             this.Entity = new Entity();
         }
+        public LambdaLecturers(int id)
+            : this()
+        {
+            this.Id = id;
+        }
         public LambdaLecturers(string email)
             : this()
         {

@@ -10,3 +10,5 @@ D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\WebApplication1\ob
 D:\School\Ontwikkelen in een bedrijfsomgeving\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
 C:\Users\johan\Desktop\testGit\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
 C:\Users\johan\Desktop\testGit\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Peekaboo\Documents\GitHub\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Peekaboo\Documents\GitHub\Project5DolphinMafia\WebApplication1\obj\Debug\WebApplication1.dll
