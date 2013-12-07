@@ -27,12 +27,13 @@ namespace WebApplication1
         }
 
         private LambdaSlots lambdaSlots;
-        protected void btnAddSlot_Click(object sender, EventArgs e)
-        {
-            this.lambdaSlots = new LambdaSlots(this.txtboxDate.Text, this.txtboxStart.Text, this.txtboxEnd.Text, this.txtboxDuration.Text, int.Parse(this.txtboxCapacity.Text), int.Parse(this.txtboxReserved.Text),RadioButtonList1.SelectedIndex ,this.DropDownList1.SelectedItem.Value);
-            this.lambdaSlots.SetDataInsert();
-            Response.Redirect("AdminSlots.aspx");
-        }
+        // Reserved is weg, dus deze code aanpassen!
+       protected void btnAddSlot_Click(object sender, EventArgs e)
+      {
+//            this.lambdaSlots = new LambdaSlots(this.txtboxDate.Text, this.txtboxStart.Text, this.txtboxEnd.Text, this.txtboxDuration.Text, int.Parse(this.txtboxCapacity.Text), int.Parse(this.txtboxReserved.Text),RadioButtonList1.SelectedIndex ,this.DropDownList1.SelectedItem.Value);
+//            this.lambdaSlots.SetDataInsert();
+//            Response.Redirect("AdminSlots.aspx");
+       }
 
         protected void txtboxCapacity_TextChanged(object sender, EventArgs e)
         {

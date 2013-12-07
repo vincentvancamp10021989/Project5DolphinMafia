@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminMain.aspx.cs" Inherits="WebApplication1.AdminMain" %>
-<link rel="stylesheet" type="text/css" href="opmaak.css">
+﻿<link href="Opmaak.css" rel="stylesheet" type="text/css" />
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminMain.aspx.cs" Inherits="WebApplication1.AdminMain" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>AP Registratie</title>
+    <title>AP Administrator Pagina</title>
 </head>
 
 <body>
@@ -13,9 +13,10 @@
     <form id="form1" runat="server">
     <div>
 
-        <h1>Admin Pagina</h1>
+        <h2>Administrator Pagina</h2>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" class="APTable">
+            <HeaderStyle CssClass="APTableHeader" />
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                 <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
@@ -28,19 +29,26 @@
                 <asp:BoundField DataField="Campus" HeaderText="Campus" SortExpression="Campus" />
             </Columns>
         </asp:GridView>
+        <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT * FROM [Slots]"></asp:SqlDataSource>
         Verwijder slot (id):
-        <asp:TextBox ID="txtboxID" runat="server" Width="46px"></asp:TextBox>
+        <asp:TextBox ID="txtboxID" runat="server"></asp:TextBox>
         <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Verwijderen" />
+        <br />
         <br />
         <table>
             <tr>
-                <td><asp:Button ID="btnAddSlot" runat="server" OnClick="btnAddSlot_Click" Text="Slot Toevoegen" Width="171px" /></td>
+                <td><asp:Button ID="btnAddSlot" runat="server" OnClick="btnAddSlot_Click" Text="Slot Toevoegen" /></td>
                 <td><asp:Button ID="btnAddCampus" runat="server" OnClick="btnAddCampus_Click" Text="Campus Toevoegen" /></td>
             </tr>
+        </table>
+        <br />
+        <table>
             <tr>
-        <td>Message of the day veranderen: <asp:TextBox ID="txtboxMOTD" runat="server" Width="292px"></asp:TextBox></td>
-        <asp:Button ID="btnMOTDSend" runat="server" Text="Verzenden" />
+                <td>Message of the day veranderen: <asp:TextBox ID="txtboxMOTD" runat="server" Width="292px"></asp:TextBox></td>
+            </tr>
+            <tr>
+                 <td><asp:Button ID="btnMOTDSend" runat="server" Text="Verzenden" /></td>
                 </tr>
         </table>
         <br />

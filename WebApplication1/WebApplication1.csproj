@@ -77,7 +77,6 @@
     <Content Include="RegistrationView.aspx" />
     <Content Include="ReservationsView.aspx" />
     <Content Include="SlotsView.aspx" />
-    <Content Include="testje.txt" />
     <Content Include="UserChangePass.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
