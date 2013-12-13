@@ -9,6 +9,7 @@ using WebApplication1.Klasses.Algemeen;
 using WebApplication1.Klasses.Login.linq;
 using System.Windows.Forms;
 using WebApplication1.Klasses.Connection;
+using WebApplication1.Klasses.Motd;
 
 namespace WebApplication1
 {
@@ -18,11 +19,12 @@ namespace WebApplication1
         private LambdaLecturers lectors;
         private Mail sendMail;
         private const string NEXT_PAGE = "SlotsView.aspx";
-        private Entity entity;
+      
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // this.MoDLabel.Text == lamba hier
+            this.MoDLabel.Text = new LambdaMotd().GetMotd();
+
             this.ErrorLabel.Visible = false;
             if (this.MoDLabel.Text == "")
             {
