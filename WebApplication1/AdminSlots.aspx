@@ -13,7 +13,8 @@
     <form id="form1" runat="server">
     <table>
         <tr>
-            <td><h2>Slot Toevoegen:</h2></td>
+            <td><h2>Slot Toevoegen:<asp:Label ID="errorLbl" runat="server" ForeColor="Red" Text="Er is iets fout gelopen..." Visible="False"></asp:Label>
+                </h2></td>
         </tr>
         <tr>
             <td>Datum</td>

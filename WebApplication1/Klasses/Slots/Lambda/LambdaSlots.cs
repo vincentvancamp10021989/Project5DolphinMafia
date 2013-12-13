@@ -31,7 +31,7 @@ namespace WebApplication1.Klasses.Slots.linq
         {
             this.ID = id;
         }
-        public LambdaSlots(string datum, string start_hour, string end_hour, string duration, int capacity,int availible , int digital, string campus)
+        public LambdaSlots(string datum, string start_hour, string end_hour, string duration, int capacity , int digital, string campus)
             :this()
         {
             this.Date = datum;
@@ -40,7 +40,7 @@ namespace WebApplication1.Klasses.Slots.linq
             this.Duration = duration;
             this.Capacity = capacity;
             this.Campus = campus;
-            this.Availible = availible;
+            this.Availible = capacity;
             this.Digital = digital;
         }
 
@@ -75,6 +75,7 @@ namespace WebApplication1.Klasses.Slots.linq
                 Available = this.Availible,
                 Campus = this.Campus,
                 Capacity = this.Capacity,
+                Digital = this.Digital,
                 Duration = this.Duration
             };
             this.Entity.dataClassContext.Slots.InsertOnSubmit(slots);

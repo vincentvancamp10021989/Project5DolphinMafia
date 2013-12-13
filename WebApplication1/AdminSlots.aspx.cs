@@ -30,9 +30,19 @@ namespace WebApplication1
         // Reserved is weg, dus deze code aanpassen!
        protected void btnAddSlot_Click(object sender, EventArgs e)
       {
-//            this.lambdaSlots = new LambdaSlots(this.txtboxDate.Text, this.txtboxStart.Text, this.txtboxEnd.Text, this.txtboxDuration.Text, int.Parse(this.txtboxCapacity.Text), int.Parse(this.txtboxReserved.Text),RadioButtonList1.SelectedIndex ,this.DropDownList1.SelectedItem.Value);
-//            this.lambdaSlots.SetDataInsert();
-//            Response.Redirect("AdminSlots.aspx");
+          try
+          {
+              this.lambdaSlots = new LambdaSlots(this.txtboxDate.Text, this.txtboxStart.Text, this.txtboxEnd.Text, this.txtboxDuration.Text, int.Parse(this.txtboxCapacity.Text), this.RadioButtonList1.SelectedIndex, this.DropDownList1.SelectedItem.Value);
+              this.lambdaSlots.SetDataInsert();
+              Response.Redirect("AdminSlots.aspx");
+              
+          }
+          catch (Exception)
+          {
+              errorLbl.Visible = true;
+          }
+          
+            
        }
 
         protected void txtboxCapacity_TextChanged(object sender, EventArgs e)
