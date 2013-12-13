@@ -48,7 +48,7 @@
                 <td>Message of the day veranderen: <asp:TextBox ID="txtboxMOTD" runat="server" Width="292px"></asp:TextBox></td>
             </tr>
             <tr>
-                 <td><asp:Button ID="btnMOTDSend" runat="server" Text="Verzenden" /></td>
+                 <td><asp:Button ID="btnMOTDSend" runat="server" Text="Verzenden" OnClick="btnMOTDSend_Click" /></td>
                 </tr>
         </table>
         <br />

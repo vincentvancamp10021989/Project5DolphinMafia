@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using WebApplication1.Klasses.Slots.linq;
 using System.Windows.Forms;
 using WebApplication1.Klasses;
+using WebApplication1.Klasses.Motd;
 
 namespace WebApplication1
 {
@@ -48,6 +49,13 @@ namespace WebApplication1
         protected void BtnLogOut_Click(object sender, EventArgs e)
         {
             Response.Redirect("Logout.aspx");
+        }
+
+        protected void btnMOTDSend_Click(object sender, EventArgs e)
+        {
+            LambdaMotd lambdamotd = new LambdaMotd();
+            lambdamotd.Id = 1;
+            lambdamotd.SetMotd(this.txtboxMOTD.Text);
         }
     }
 }
