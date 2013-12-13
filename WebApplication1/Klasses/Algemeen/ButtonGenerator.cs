@@ -90,12 +90,12 @@ namespace WebApplication1.Klasses.Algemeen
                 this.lambdaSlots = new LambdaSlots(this.lambdaReservations.Id);
                 HttpContext.Current.Session.Add(SessionEnum.SessionNames.SlotsID.ToString(), Convert.ToInt32(this.Bord[x].CommandName));
 
-                if (lambdaReservations.GetCheckReservationId())
+                while (lambdaReservations.GetCheckReservationId())
                 {
                     lambdaReservations.SetDeleteReservationRowById();
                     this.lambdaSlots.SetSlotsUpdateDataCountUp();
-                    HttpContext.Current.Response.Redirect(RESERVATION_PAGE);
                 }
+                HttpContext.Current.Response.Redirect(RESERVATION_PAGE);
             };
         }
     }
