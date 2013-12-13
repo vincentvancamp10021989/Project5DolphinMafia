@@ -36,7 +36,7 @@
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project5ConnectionString %>" SelectCommand="SELECT Id, username, password_md5, email, access, first_name, last_name FROM Login"></asp:SqlDataSource>
     <br />
-    <asp:Label ID="MoDLabel" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="MoDLabel" runat="server" Text=""></asp:Label>
 
 
 
