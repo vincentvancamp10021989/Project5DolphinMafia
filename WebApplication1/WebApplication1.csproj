@@ -66,7 +66,6 @@
     <Content Include="AdminCampus.aspx" />
     <Content Include="AdminMain.aspx" />
     <Content Include="AdminSlots.aspx" />
-    <Content Include="AdminSlotsUpdate.aspx" />
     <Content Include="AdminUsers.aspx" />
     <Content Include="ExportReservaties.aspx" />
     <Content Include="images\artesis.jpg" />
@@ -103,13 +102,6 @@
     </Compile>
     <Compile Include="AdminSlots.aspx.designer.cs">
       <DependentUpon>AdminSlots.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminSlotsUpdate.aspx.cs">
-      <DependentUpon>AdminSlotsUpdate.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminSlotsUpdate.aspx.designer.cs">
-      <DependentUpon>AdminSlotsUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminUsers.aspx.cs">
       <DependentUpon>AdminUsers.aspx</DependentUpon>

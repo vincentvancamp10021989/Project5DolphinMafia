@@ -41,10 +41,10 @@ namespace WebApplication1.Klasses.Algemeen
             this.Bord[x].CommandName = stringID;
 
             if (!lambdaSlots.GetControlAvailibe() && !this.lambdaReservations.GetCheckReservationBySlotID())
-                this.Bord[x].Text = stringID;
+                this.Bord[x].Text = "V";
             else
             {
-                this.Bord[x].Text = "x";
+                this.Bord[x].Text = "X";
                 this.Bord[x].Enabled = false;
             }
             return this.Bord[x];

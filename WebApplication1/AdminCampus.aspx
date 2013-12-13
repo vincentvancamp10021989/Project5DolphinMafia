@@ -43,6 +43,8 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSourceCampus" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT * FROM [Campus]"></asp:SqlDataSource>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT * FROM [Campus]"></asp:SqlDataSource>
+        <br />
+         <asp:Button ID="terugBtn" runat="server" OnClick="terugBtn_Click" Text="Terug" />
     </div>
     </form>
     </div>

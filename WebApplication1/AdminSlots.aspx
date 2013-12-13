@@ -13,8 +13,9 @@
     <form id="form1" runat="server">
     <table>
         <tr>
-            <td><h2>Slot Toevoegen:<asp:Label ID="errorLbl" runat="server" ForeColor="Red" Text="Er is iets fout gelopen..." Visible="False"></asp:Label>
-                </h2></td>
+            <td><h2>Slot Toevoegen:</h2></td>
+            <td><asp:Label ID="errorLbl" runat="server" ForeColor="Red" Text="Er is iets fout gelopen..." Visible="False"></asp:Label></td>
+                
         </tr>
         <tr>
             <td>Datum</td>
@@ -71,6 +72,8 @@
             </Columns>
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT * FROM [Slots]"></asp:SqlDataSource>
+        <br />
+        <asp:Button ID="terugBtn" runat="server" OnClick="terugBtn_Click" Text="Terug" />
     </form>
 </div>
 </body>

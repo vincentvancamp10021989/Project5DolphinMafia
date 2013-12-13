@@ -49,5 +49,10 @@ namespace WebApplication1
         {
             
         }
+
+        protected void terugBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminMain.aspx");
+        }
     }
 }

@@ -10,6 +10,7 @@ using WebApplication1.Klasses.Login.linq;
 using System.Windows.Forms;
 using WebApplication1.Klasses.Connection;
 using WebApplication1.Klasses.Motd;
+using WebApplication1.Klasses.Campus.Lambda;
 
 namespace WebApplication1
 {
@@ -19,7 +20,7 @@ namespace WebApplication1
         private LambdaLecturers lectors;
         private Mail sendMail;
         private const string NEXT_PAGE = "SlotsView.aspx";
-      
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -57,7 +58,8 @@ namespace WebApplication1
                 }
                 else
                 {
-                    HttpContext.Current.Session.Add(SessionEnum.SessionNames.CampusName.ToString(), "Antwerpen");
+                    LambdaCampus lambdaCampus = new LambdaCampus();
+                    HttpContext.Current.Session.Add(SessionEnum.SessionNames.CampusName.ToString(), lambdaCampus.Entity.DB_Campus.ToList().First().Place);
                     Response.Redirect(NEXT_PAGE);
                 }
             }

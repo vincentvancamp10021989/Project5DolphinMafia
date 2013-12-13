@@ -41,7 +41,6 @@ namespace WebApplication1
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             LambdaSlots lambdaSlots = new LambdaSlots(int.Parse(txtboxID.Text));
-            MessageBox.Show(lambdaSlots.ID.ToString());
             lambdaSlots.SetDeleteSlotRowById();
             HttpContext.Current.Response.Redirect("AdminMain.aspx");
         }
@@ -56,6 +55,7 @@ namespace WebApplication1
             LambdaMotd lambdamotd = new LambdaMotd();
             lambdamotd.Id = 1;
             lambdamotd.SetMotd(this.txtboxMOTD.Text);
+            Response.Redirect("AdminMain.aspx");
         }
     }
 }
