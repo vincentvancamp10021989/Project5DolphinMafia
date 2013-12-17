@@ -75,5 +75,10 @@ namespace WebApplication1
         {
             Response.Redirect("ReservationsView.aspx");
         }
+
+        protected void BtnPassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserChangePass.aspx");
+        }
     }
 }

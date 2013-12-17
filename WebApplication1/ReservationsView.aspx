@@ -16,6 +16,7 @@
 <br />
 
  <asp:Button ID="btnTerug" runat="server" OnClick="btnTerug_Click" Text="Terug naar overzicht" />
+        <asp:Button ID="BtnExport" runat="server" OnClick="BtnExport_Click" Text="Export reservaties" />
 <br />
 <br />
 <br />

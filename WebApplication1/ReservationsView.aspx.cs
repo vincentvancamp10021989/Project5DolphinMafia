@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,6 +10,8 @@ using System.Windows.Forms;
 using WebApplication1.Klasses;
 using WebApplication1.Klasses.Algemeen;
 using WebApplication1.Klasses.Connection;
+using WebApplication1.Klasses.Export;
+using WebApplication1.Klasses.Export.Lambda;
 using WebApplication1.Klasses.Reservations;
 using WebApplication1.Klasses.Reservations.linq;
 using WebApplication1.Klasses.Reservations.Table;
@@ -70,6 +73,22 @@ namespace WebApplication1
         protected void btnTerug_Click(object sender, EventArgs e)
         {
             Response.Redirect("SlotsView.aspx");
+        }
+
+        protected void BtnExport_Click(object sender, EventArgs e)
+        {
+            LambdaExport le = new LambdaExport();
+            List<Slots> query = le.SelectSlots();
+            Export exp = new Export();
+            var xEle = exp.MakeXml(query);
+
+            string path = MapPath(@"~\myxml.xml");
+            string name = Path.GetFileName(path);
+            Response.ClearContent();
+            Response.AppendHeader("content-disposition", "attachment; filename=" + name);
+            Response.ContentType = "text/xml";
+            Response.Write(xEle.ToString());
+            Response.End();
         }
     }
 }

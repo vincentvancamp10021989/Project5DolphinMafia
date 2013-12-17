@@ -15,7 +15,8 @@
     <form id="form1" runat="server">
 
 
-        <h2>Toezichtsbeurten BLS</h2>
+        <h2>Toezichtsbeurten BLS<asp:Button ID="BtnPassword" runat="server" OnClick="BtnPassword_Click" Text="wijzig password" />
+        </h2>
         <asp:DropDownList ID="dropDownListCampus" runat="server" DataSourceID="UniekCampus" DataTextField="Plaats" DataValueField="Plaats">
         </asp:DropDownList>
         <asp:SqlDataSource ID="UniekCampus" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT [Plaats] FROM [Campus]"></asp:SqlDataSource>
