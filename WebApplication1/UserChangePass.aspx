@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserChangePass.aspx.cs" Inherits="WebApplication1.UserChangePass" %>
+﻿<link href="Opmaak.css" rel="stylesheet" type="text/css" />
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserChangePass.aspx.cs" Inherits="WebApplication1.UserChangePass" %>
 
 <!DOCTYPE html>
 
@@ -12,9 +13,12 @@
     </style>
 </head>
 <body>
+    <div class="banner"></div>
+    <div class="content">
     <form id="form1" runat="server">
     <div>
-        <table border="1">
+        <div class="tableTop">
+        <table border="0">
 <tr>
 <td> 
     
@@ -45,6 +49,7 @@
                 </td>
             </tr>
 </table> 
+            </div>
     
         <h3><asp:Label ID="lblerror" runat="server"></asp:Label></h3>
         <asp:Button ID="btnBack" runat="server" OnClick="btnBack_Click" Text="Terug" />
@@ -52,5 +57,6 @@
     
     </div>
     </form>
+        </div>
 </body>
 </html>
