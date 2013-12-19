@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using WebApplication1.Klasses.Slots.linq;
 using WebApplication1.Klasses.Reservations.linq;
 using WebApplication1.Klasses.Connection;
+using WebApplication1.Klasses.Campus.Lambda;
 
 namespace WebApplication1.Klasses.Algemeen
 {
@@ -20,6 +21,8 @@ namespace WebApplication1.Klasses.Algemeen
         private LambdaSlots lambdaSlots;
         private LambdaReservations lambdaReservations;
         private Entity entity;
+        private LambdaCampus lambdaCampus;
+
         public int Aantal { set; get; }
 
 
@@ -31,8 +34,10 @@ namespace WebApplication1.Klasses.Algemeen
         public System.Web.UI.WebControls.Button WriteButton(int x, string stringID)
         {
             this.entity = new Entity();
-            this.lambdaSlots = new LambdaSlots(entity.DB_Slots.ElementAt(x).ID);
 
+            this.lambdaCampus = new LambdaCampus(HttpContext.Current.Session[SessionEnum.SessionNames.CampusName.ToString()].ToString());
+
+            this.lambdaSlots = new LambdaSlots(this.lambdaCampus.GetFilterToCampus().ElementAt(x).ID);
             this.lambdaReservations = new LambdaReservations(this.lambdaSlots.ID);
 
             this.Bord[x] = new System.Web.UI.WebControls.Button();
@@ -77,7 +82,7 @@ namespace WebApplication1.Klasses.Algemeen
                     HttpContext.Current.Response.Redirect(SLOT_PAGE);
                 }
                 catch (Exception e)
-                {                }
+                { }
             };
         }
 
