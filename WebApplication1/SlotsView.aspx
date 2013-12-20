@@ -22,7 +22,9 @@
         <asp:SqlDataSource ID="UniekCampus" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT [Plaats] FROM [Campus]"></asp:SqlDataSource>
         <asp:Button ID="buttonKies" runat="server" Text="Kies" OnClick="buttonKies_Click" />
 
-<h3>Toezichtsbeurten voor :  Antwerpen</h3>
+<h3>Toezichtsbeurten voor :  
+    <asp:Label ID="lblCampus" runat="server"></asp:Label>
+        </h3>
 <br />
 
         <asp:Button ID="btnReservations" runat="server" OnClick="btnReservations_Click" Text="Mijn reservaties" />

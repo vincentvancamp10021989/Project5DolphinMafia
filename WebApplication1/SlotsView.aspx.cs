@@ -57,6 +57,7 @@ namespace WebApplication1
                 Panel1.Controls.Add(buttons.WriteButton(i, table.List.ElementAt(i).ID.ToString()));
                 this.buttons.ClickSlots(i);
             }
+            lblCampus.Text = lambdaCampus.CampusName;
         }
 
         protected void buttonKies_Click(object sender, EventArgs e)
