@@ -40,22 +40,42 @@ namespace WebApplication1
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            LambdaSlots lambdaSlots = new LambdaSlots(int.Parse(txtboxID.Text));
-            lambdaSlots.SetDeleteSlotRowById();
-            HttpContext.Current.Response.Redirect("AdminMain.aspx");
+            try
+            {
+                LambdaSlots lambdaSlots = new LambdaSlots(int.Parse(txtboxID.Text));
+                lambdaSlots.SetDeleteSlotRowById();
+                HttpContext.Current.Response.Redirect("AdminMain.aspx");
+                
+            }
+            catch (Exception exep)
+            {
+                LblError.Visible = true;
+                txtboxID.Text = "";
+            }
+            
         }
 
         protected void BtnLogOut_Click(object sender, EventArgs e)
         {
+            
             Response.Redirect("Logout.aspx");
         }
 
         protected void btnMOTDSend_Click(object sender, EventArgs e)
         {
-            LambdaMotd lambdamotd = new LambdaMotd();
-            lambdamotd.Id = 1;
-            lambdamotd.SetMotd(this.txtboxMOTD.Text);
-            Response.Redirect("AdminMain.aspx");
+            try
+            {
+                LambdaMotd lambdamotd = new LambdaMotd();
+                lambdamotd.Id = 1;
+                lambdamotd.SetMotd(this.txtboxMOTD.Text);
+                Response.Redirect("AdminMain.aspx");
+            }
+            catch (Exception)
+            {
+                LblError.Visible = true;
+                txtboxMOTD.Text = "";
+            }
+            
         }
     }
 }
