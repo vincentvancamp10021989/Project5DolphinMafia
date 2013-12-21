@@ -46,7 +46,9 @@
 <table>
     <tr>
         <td><asp:Label ID="mailAdressLabel" runat="server" Text="Mailadres"></asp:Label></td>
-        <td><asp:TextBox ID="txtBoxMail" runat="server"></asp:TextBox></td>
+        <td><asp:TextBox ID="txtBoxMail" runat="server"></asp:TextBox>
+            <asp:Label ID="lblEmail" runat="server" Text="@ap.be"></asp:Label>
+        </td>
     </tr>
 </table>
 

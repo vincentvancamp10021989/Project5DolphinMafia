@@ -31,7 +31,7 @@
         </asp:GridView>
         <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DB_9ABFAC_Project5ConnectionString %>" SelectCommand="SELECT * FROM [Slots]"></asp:SqlDataSource>
-        <asp:Label ID="LblError" runat="server" ForeColor="#FF3300" Text="Er is iets fout gelopen"></asp:Label>
+        <asp:Label ID="LblError" runat="server" ForeColor="#FF3300" Text="Er is iets fout gelopen" Visible="False"></asp:Label>
         <br />
         Verwijder slot (id):
         <asp:TextBox ID="txtboxID" runat="server"></asp:TextBox>

@@ -11,13 +11,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="AdminCampus.aspx">
-      <publishTime>12/06/2013 11:28:30</publishTime>
+      <publishTime>12/13/2013 16:42:03</publishTime>
     </File>
     <File Include="AdminMain.aspx">
-      <publishTime>12/06/2013 11:28:30</publishTime>
+      <publishTime>12/20/2013 14:40:34</publishTime>
     </File>
     <File Include="AdminSlots.aspx">
-      <publishTime>12/06/2013 11:28:30</publishTime>
+      <publishTime>12/13/2013 16:42:04</publishTime>
     </File>
     <File Include="AdminSlotsUpdate.aspx">
       <publishTime>12/06/2013 11:28:30</publishTime>
@@ -26,13 +26,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/06/2013 11:28:30</publishTime>
     </File>
     <File Include="bin/WebApplication1.dll">
-      <publishTime>12/06/2013 15:46:23</publishTime>
+      <publishTime>12/20/2013 15:01:14</publishTime>
     </File>
     <File Include="bin/WebApplication1.pdb">
-      <publishTime>12/06/2013 15:46:23</publishTime>
+      <publishTime>12/20/2013 15:01:14</publishTime>
     </File>
     <File Include="DataClasses1.dbml">
-      <publishTime>12/06/2013 11:28:30</publishTime>
+      <publishTime>12/13/2013 16:08:01</publishTime>
     </File>
     <File Include="ExportReservaties.aspx">
       <publishTime>12/06/2013 12:24:10</publishTime>
@@ -44,28 +44,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/06/2013 11:28:31</publishTime>
     </File>
     <File Include="LoginView.aspx">
-      <publishTime>12/06/2013 11:28:30</publishTime>
+      <publishTime>12/20/2013 14:52:41</publishTime>
     </File>
     <File Include="Logout.aspx">
       <publishTime>12/06/2013 11:28:31</publishTime>
     </File>
     <File Include="Opmaak.css">
-      <publishTime>12/06/2013 11:28:31</publishTime>
+      <publishTime>12/13/2013 12:26:35</publishTime>
     </File>
     <File Include="RegistrationView.aspx">
-      <publishTime>12/06/2013 11:28:31</publishTime>
+      <publishTime>12/13/2013 12:26:35</publishTime>
     </File>
     <File Include="ReservationsView.aspx">
-      <publishTime>12/06/2013 11:28:31</publishTime>
+      <publishTime>12/17/2013 13:47:56</publishTime>
     </File>
     <File Include="SlotsView.aspx">
-      <publishTime>12/06/2013 11:28:31</publishTime>
+      <publishTime>12/20/2013 13:26:14</publishTime>
     </File>
     <File Include="testje.txt">
       <publishTime>12/06/2013 11:28:31</publishTime>
     </File>
     <File Include="UserChangePass.aspx">
-      <publishTime>12/06/2013 11:28:31</publishTime>
+      <publishTime>12/19/2013 21:17:19</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>12/06/2013 15:46:26</publishTime>

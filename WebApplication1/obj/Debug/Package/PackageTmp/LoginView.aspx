@@ -1,5 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginView.aspx.cs" Inherits="WebApplication1.LoginView" %>
-<link rel="stylesheet" type="text/css" href="opmaak.css">
+﻿<link href="Opmaak.css" rel="stylesheet" type="text/css" />
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginView.aspx.cs" Inherits="WebApplication1.LoginView" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -36,7 +36,7 @@
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Project5ConnectionString %>" SelectCommand="SELECT Id, username, password_md5, email, access, first_name, last_name FROM Login"></asp:SqlDataSource>
     <br />
-    <asp:Label ID="MoDLabel" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="MoDLabel" runat="server" Text=""></asp:Label>
 
 
 
@@ -46,7 +46,9 @@
 <table>
     <tr>
         <td><asp:Label ID="mailAdressLabel" runat="server" Text="Mailadres"></asp:Label></td>
-        <td><asp:TextBox ID="txtBoxMail" runat="server"></asp:TextBox></td>
+        <td><asp:TextBox ID="txtBoxMail" runat="server"></asp:TextBox>
+            <asp:Label ID="lblEmail" runat="server" Text="@ap.be"></asp:Label>
+        </td>
     </tr>
 </table>
 

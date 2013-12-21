@@ -8,13 +8,13 @@ namespace WebApplication1.Klasses.Export.Lambda
 {
     public class LambdaExport
     {
-        public List<Slots.Slots> SelectSlots()
+        public List<String> SelectSlots()
         {
             var query = from s in new Entity().DB_Slots
                         join r in new Entity().DB_Reservations
                         on s.ID equals r.SlotID
                         where (r.LecturerID.Equals(Convert.ToInt32(HttpContext.Current.Session[SessionEnum.SessionNames.LecturorsID.ToString()])))
-                        select s;
+                        select (s.Date + ", " + s.StartTime + ", " + s.Duration + ", "+ s.Capacity + ", " + s.Campus + ", " + s.Digital);
 
             return query.ToList();
         }

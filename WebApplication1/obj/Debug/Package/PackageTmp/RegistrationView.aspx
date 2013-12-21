@@ -1,26 +1,19 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrationView.aspx.cs" Inherits="WebApplication1.RegistrationView" %>
+﻿<link href="Opmaak.css" rel="stylesheet" type="text/css" />
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegistrationView.aspx.cs" Inherits="WebApplication1.RegistrationView" %>
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title>Registratie</title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 228px;
-        }
-    </style>
+<head>
+    <title>AP Registratie</title>
 </head>
+
+
 <body>
-    <asp:Image  ID="Logo" runat="server" ImageUrl="~/images/artesis.jpg" 
-                    BorderStyle="None" width="370" />
+    <div class="banner"></div>
+    <div class="content">
 
-
-<br />
-<br />
-<br />
     <form id="form1" runat="server">
-    <table border="0">
+    <table>
 <tbody>
 
 <tr>
@@ -63,7 +56,7 @@
     </td>
 </tr>
 <tr>
-<td align="right">
+<td>
     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Verzenden" />
     </td>
 </tr>
@@ -72,6 +65,6 @@
 
 </tbody></table>
     </form>
+        </div>
 </body>
-</html>
 

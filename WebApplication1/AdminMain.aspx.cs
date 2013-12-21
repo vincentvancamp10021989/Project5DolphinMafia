@@ -45,14 +45,13 @@ namespace WebApplication1
                 LambdaSlots lambdaSlots = new LambdaSlots(int.Parse(txtboxID.Text));
                 lambdaSlots.SetDeleteSlotRowById();
                 HttpContext.Current.Response.Redirect("AdminMain.aspx");
-                
             }
-            catch (Exception exep)
+            catch (Exception)
             {
                 LblError.Visible = true;
                 txtboxID.Text = "";
             }
-            
+                
         }
 
         protected void BtnLogOut_Click(object sender, EventArgs e)

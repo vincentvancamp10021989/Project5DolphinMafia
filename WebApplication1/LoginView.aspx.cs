@@ -75,7 +75,7 @@ namespace WebApplication1
         {
             try
             {
-                this.sendMail = new Mail(HttpUtility.HtmlEncode(this.txtBoxMail.Text));
+                this.sendMail = new Mail(HttpUtility.HtmlEncode(this.txtBoxMail.Text)+lblEmail.Text);
                 this.sendMail.SendEmailWithNewPassword();
                 this.txtBoxMail.Text = "";
             }

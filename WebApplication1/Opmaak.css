@@ -4,8 +4,9 @@ div.banner
 {
 	margin:auto;
 	background-image:url(images/logo.png);
-	width: 229px;
 	height: 26px;
+	background-repeat:no-repeat;
+	background-position:left;
 	
 }
 head

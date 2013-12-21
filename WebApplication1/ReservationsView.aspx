@@ -18,6 +18,8 @@
  <asp:Button ID="btnTerug" runat="server" OnClick="btnTerug_Click" Text="Terug naar overzicht" />
         <asp:Button ID="BtnExport" runat="server" OnClick="BtnExport_Click" Text="Export reservaties" />
 <br />
+        <asp:Label ID="lblReservatieTekst" runat="server" ForeColor="#FF3300" Text="uw reservaties zijn geëxporteerd naar:" Visible="False"></asp:Label>
+        <asp:Label ID="lblLocatie" runat="server" ForeColor="#FF3300" Visible="False"></asp:Label>
 <br />
 <br />
         <div class="tableTop">

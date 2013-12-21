@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Helpers;
 using System.Windows.Forms;
 using WebApplication1.Klasses;
 using WebApplication1.Klasses.Algemeen;
@@ -77,18 +78,22 @@ namespace WebApplication1
 
         protected void BtnExport_Click(object sender, EventArgs e)
         {
+            string location = @"c:\Temp\Products.json";
             LambdaExport le = new LambdaExport();
-            List<Slots> query = le.SelectSlots();
-            Export exp = new Export();
-            var xEle = exp.MakeXml(query);
+            List<String> query = le.SelectSlots();
+            using (StringWriter writer = new StringWriter())
+            {
+                System.Web.Helpers.Json.Write(query, writer);
 
-            string path = MapPath(@"~\myxml.xml");
-            string name = Path.GetFileName(path);
-            Response.ClearContent();
-            Response.AppendHeader("content-disposition", "attachment; filename=" + name);
-            Response.ContentType = "text/xml";
-            Response.Write(xEle.ToString());
-            Response.End();
+                using (StreamWriter outfile =
+                           new StreamWriter(location))
+                {
+                    outfile.Write(writer.ToString());
+                }
+            }
+            lblReservatieTekst.Visible = true;
+            lblLocatie.Text = location;
+            lblLocatie.Visible = true;
         }
     }
 }

@@ -53,6 +53,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -67,7 +68,6 @@
     <Content Include="AdminMain.aspx" />
     <Content Include="AdminSlots.aspx" />
     <Content Include="AdminUsers.aspx" />
-    <Content Include="ExportReservaties.aspx" />
     <Content Include="images\artesis.jpg" />
     <Content Include="images\logo.png" />
     <Content Include="LoginView.aspx" />
@@ -114,13 +114,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="ExportReservaties.aspx.cs">
-      <DependentUpon>ExportReservaties.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ExportReservaties.aspx.designer.cs">
-      <DependentUpon>ExportReservaties.aspx</DependentUpon>
     </Compile>
     <Compile Include="Klasses\Algemeen\Hash.cs" />
     <Compile Include="Klasses\Algemeen\ButtonGenerator.cs" />
